@@ -568,12 +568,19 @@ body.lock {
   justify-content: center;
   align-items: center;
   margin-bottom: 80px;
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+.main-block__title._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
 @media (max-width: 767.98px) {
   .main-block__title {
     margin-bottom: 40px;
-    width: 270px;
-    height: 270px;
+    width: 250px;
+    height: 250px;
   }
 }
 .main-block__title h1 {
@@ -597,8 +604,15 @@ body.lock {
   line-height: 150%;
   text-transform: uppercase;
   padding: 0px 20px;
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease;
 }
-
+.main-block__text._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  transition: all 0.8s ease 0.4s;
+}
 .collection a:hover {
   color: #52403A;
 }
@@ -643,6 +657,15 @@ body.lock {
     flex-direction: column-reverse;
   }
 }
+.collection-revers .collection__img {
+  transform: translate(-120%, 0px);
+  opacity: 0;
+  transition: all 0.7s ease;
+}
+.collection-revers .collection__img._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
 .collection__row {
   display: flex;
   justify-content: space-between;
@@ -655,6 +678,13 @@ body.lock {
 }
 .collection__img {
   flex: 0 1 45%;
+  transform: translate(120%, 0px);
+  opacity: 0;
+  transition: all 0.7s ease;
+}
+.collection__img._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
 @media (max-width: 1800px) {
   .collection__img {
@@ -680,6 +710,7 @@ body.lock {
 }
 @media (max-width: 991.98px) {
   .collection__items {
+    padding: 0px 10px;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -759,6 +790,27 @@ body.lock {
     flex-wrap: wrap;
     justify-content: space-around;
   }
+}
+.brands__item {
+  opacity: 0;
+  transform: translate(0px, 50%);
+  transition: all 0.5s ease;
+}
+.brands__item._active {
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
+.brands__item:nth-child(1) {
+  transition: all 0.5s ease 0s;
+}
+.brands__item:nth-child(2) {
+  transition: all 0.5s ease 0.2s;
+}
+.brands__item:nth-child(3) {
+  transition: all 0.5s ease 0.4s;
+}
+.brands__item:nth-child(4) {
+  transition: all 0.5s ease 0.6s;
 }
 @media (max-width: 1122px) {
   .brands__item {
