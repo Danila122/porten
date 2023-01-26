@@ -1,0 +1,25 @@
+.tabs {
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: inline-block;
+
+    &.active{
+      color: red;
+    }
+  }
+
+  &__body {
+    display: flex;
+  }
+
+  &__block {
+    display: none;
+    &.active{
+      display: block;
+    }
+  }
+}
